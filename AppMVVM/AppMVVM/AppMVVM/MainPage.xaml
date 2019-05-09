@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:AppMVVM"
+             x:Class="AppMVVM.MainPage"
+             Title="Converter"
+             BindingContext="{Binding Main,Source={StaticResource Locator}}">
+
+    <ScrollView>
+        <StackLayout HorizontalOptions="Center" Padding="10">
+            <Label Text="Covertir a Moneda Nacional"></Label>
+            <Entry Text="{Binding Moneda, Mode=TwoWay}" Keyboard="Numeric" Placeholder="Ingrese moneda..." ></Entry>
+            <Button Command="{Binding CommandConvertir}" Text="Convertir" BackgroundColor="Navy" BorderRadius="20" HeightRequest="40" TextColor="White"></Button>
+            <Entry Text="Resultado"></Entry>
+        </StackLayout>
+    </ScrollView> 
+</ContentPage>
